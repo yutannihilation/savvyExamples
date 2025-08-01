@@ -7,9 +7,9 @@ edition = "2021"
 crate-type = ["staticlib", "lib"]
 
 [dependencies]
-savvy = { path = "../../../", features = ["complex", "altrep", "logger"] }
+savvy = { git = "https://github.com/yutannihilation/savvy", features = ["complex", "altrep", "logger"] }
 # for calling Rf_errorcall() to test error handling
-savvy-ffi = { path = "../../../savvy-ffi" }
+savvy-ffi = { git = "https://github.com/yutannihilation/savvy" }
 
 log = "0.4"
 env_logger = { version = "0.11", default-features = false }
