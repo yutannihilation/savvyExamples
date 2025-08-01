@@ -4,6 +4,8 @@ on:
   release:
     # Must republish release to update assets
     types: [ published ]
+  push:
+    branches: [ main ]
 
 name: Build and deploy wasm R package image
 
