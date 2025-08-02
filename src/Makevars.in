@@ -31,7 +31,7 @@ $(STATLIB):
 	    export CARGO_PROFILE_DEV_PANIC="unwind" && \
 	    export CARGO_PROFILE_RELEASE_PANIC="unwind" && \
 	    export RUSTFLAGS="$(RUSTFLAGS) -Zdefault-visibility=hidden -Zemscripten-wasm-eh" && \
-	    cargo +nightly build $(CARGO_BUILD_ARGS) --target $(TARGET); \
+	    cargo +nightly build $(CARGO_BUILD_ARGS) --target $(TARGET) -Zbuild-std=std; \
 	  fi
 
 clean_intermediate: $(SHLIB)
