@@ -30,8 +30,8 @@ $(STATLIB):
 	  else \
 	    export CARGO_PROFILE_DEV_PANIC="unwind" && \
 	    export CARGO_PROFILE_RELEASE_PANIC="unwind" && \
-	    export RUSTFLAGS="$(RUSTFLAGS) -Zdefault-visibility=hidden" && \
-	    cargo +nightly build $(CARGO_BUILD_ARGS) --target $(TARGET) -Zbuild-std=std; \
+	    export RUSTFLAGS="$(RUSTFLAGS) -Zdefault-visibility=hidden -Zbuild-std=std" && \
+	    cargo +nightly build $(CARGO_BUILD_ARGS) --target $(TARGET); \
 	  fi
 
 clean_intermediate: $(SHLIB)
