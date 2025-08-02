@@ -21,4 +21,4 @@ jobs:
       pages: write
       id-token: write
     with:
-      packages: "local::.
+      packages: "local::."
